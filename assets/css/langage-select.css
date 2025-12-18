@@ -1,0 +1,66 @@
+:root {
+  --color-black-separate: 37, 40, 44;
+  --color-black: rgb(var(--color-black-separate));
+  --color-black-50: rgb(244, 246, 247);
+  --color-black-100: #e3e7ea;
+  --color-black-200: #cbd3d6;
+  --color-black-transparent: rgba(var(--color-black-separate), 0.322);
+
+  --box-padding: 0.5rem 1rem;
+  --border-radius: 5px;
+  --box-shadow: 0 4px 8px var(--color-black-transparent);
+}
+
+.langage-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  cursor: pointer;
+  background-color: var(--color-black-50);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  z-index: 1;
+}
+
+.langage-selected {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: var(--box-padding);
+}
+
+.langages-list {
+  background-color: var(--color-black-50);
+  position: absolute;
+  top: calc(100% + 0.25rem);
+  right: 0;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  max-height: 250px;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.langage-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: var(--box-padding);
+  border-bottom: 1px solid var(--color-black-100);
+  color: var(--color-black);
+}
+
+.langage-item:hover {
+  background-color: var(--color-black-200);
+  color: var(--color-black);
+}
+
+.langage-item:hover i,
+.langage-selected:hover i {
+  display: inline-block;
+  transform: scale(1.2);
+  transition: all 0.3s ease;
+}
